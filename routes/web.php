@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/urllist', 'Url\UrlController@urllist');
+Route::get('/url/{id}/delete', 'Url\UrlController@delete');
+Route::get('/url/{id}/tagset', 'Url\UrlController@tagset');
+Route::post('/taginput', 'Url\UrlController@taginput');
